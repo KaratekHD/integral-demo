@@ -1,9 +1,10 @@
-import sys
-
-b = 0
+#!/usr/bin/python3
+b = 1
+n = 150000
 
 def calc_y(x):
-    return 4 - (x*x)
+    return x**2
+    #return 3.552 * (0.9876**x)
 
 def calc_integral(n):
     dx = b / n
@@ -17,6 +18,6 @@ def calc_integral(n):
     print(f"n = {n} | dx = {dx} | {res} FE")
 
 if __name__ == "__main__":
-    b = int(sys.argv[1])
-    for i in range(1, 8 + 1):
+    #calc_integral(n)
+    for i in range(1, n + 1):
         calc_integral(i)
